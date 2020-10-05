@@ -9,10 +9,19 @@ using System.Diagnostics;
 public class Player : MonoBehaviour
 {
     float _speed = 5;
+    float jumpForce = 7;
+    private Rigidbody rb;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
+
+
         transform.position = new Vector3(0, 0.50f, 0);
+        rb = GetComponent<Rigidbody>();
+
     }
 
     // Update is called once per frame
@@ -43,5 +52,13 @@ public class Player : MonoBehaviour
 
             transform.Translate(new Vector3(HorizontalInput, 0, 0) * _speed * Time.deltaTime);
         }
+
+        if (transform.position.y <= 0.5f && Input.GetKeyDown(KeyCode.Space))
+        {
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        }
     }
+
+
+
 }
