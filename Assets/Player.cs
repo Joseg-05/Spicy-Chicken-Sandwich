@@ -28,25 +28,25 @@ public class Player : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
         {
             float verticalInput = Input.GetAxis("Vertical");
 
             transform.Translate(new Vector3(0, 0, verticalInput) * _speed * Time.deltaTime);
         }
-        if (Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
         {
             float verticalInput = Input.GetAxis("Vertical");
 
             transform.Translate(new Vector3(0, 0, verticalInput) * _speed * Time.deltaTime);
         }
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
             float HorizontalInput = Input.GetAxis("Horizontal");
 
             transform.Translate(new Vector3(HorizontalInput, 0, 0) * _speed * Time.deltaTime);
         }
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {
             float HorizontalInput = Input.GetAxis("Horizontal");
 
