@@ -5,13 +5,16 @@ using System.Security.Cryptography;
 using System.Threading;
 using UnityEngine;
 using System.Diagnostics;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
     float _speed = 5;
     float jumpForce = 7;
     private Rigidbody rb;
-
+    private int score = 0;
+    public Text text;
+	public GameObject winText;
 
 
     // Start is called before the first frame update
@@ -59,6 +62,13 @@ public class Player : MonoBehaviour
         }
     }
 
-
+    void OnTriggerEnter(Collider collider)
+    {
+        if (collider.tag == "Coin")
+        {
+            
+            Destroy(collider.gameObject);
+        }
+    }
 
 }
