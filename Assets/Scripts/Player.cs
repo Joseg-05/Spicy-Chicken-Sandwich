@@ -12,6 +12,9 @@ public class Player : MonoBehaviour
     float jumpForce = 7;
     private Rigidbody rb;
     Animator anim;
+    private GameObject triggeringNPC;
+    private bool triggering;
+    public GameObject npcText;
 
 
 
@@ -57,8 +60,40 @@ public class Player : MonoBehaviour
             anim.SetTrigger("Running");
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
+        if(triggering)
+        {
+            npcText.SetActive(true);
+            if(Input.GetKeyDown(KeyCode.E))
+            {
+                Destroy(triggeringNPC);
+                triggering = false;
+            }
+        }
+        else
+        {
+            npcText.SetActive(false);
+        }
     }
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "NPC")
+        {
 
+            triggering = true;
+            triggeringNPC = other.gameObject;
+
+
+        }
+    }
+    void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "NPC")
+        {
+
+            triggering = false;
+            triggeringNPC = null;
+        }
+    }
 
 
 }
