@@ -8,14 +8,14 @@ using System.Diagnostics;
 
 public class Player : MonoBehaviour
 {
-    float _speed = 5;
+    float _speed = 1;
     float jumpForce = 7;
     private Rigidbody rb;
     Animator anim;
     private GameObject triggeringNPC;
     private bool triggering;
     public GameObject npcText;
-
+    public float RotateSpeed = 30f;
 
 
     // Start is called before the first frame update
@@ -60,7 +60,10 @@ public class Player : MonoBehaviour
             anim.SetTrigger("Running");
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
-        if(triggering)
+        if (Input.GetKey(KeyCode.R))
+            transform.Rotate(-Vector3.up * RotateSpeed * Time.deltaTime);
+
+        if (triggering)
         {
             npcText.SetActive(true);
             if(Input.GetKeyDown(KeyCode.E))
