@@ -60,9 +60,14 @@ public class Player : MonoBehaviour
             anim.SetTrigger("Running");
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
-        if (Input.GetKey(KeyCode.R))
-            transform.Rotate(-Vector3.up * RotateSpeed * Time.deltaTime);
-
+        if (Input.GetKey(KeyCode.R)) 
+        { 
+        transform.Rotate(-Vector3.up * RotateSpeed * Time.deltaTime);
+         }
+        if (Input.GetKey(KeyCode.Q))
+        {
+            transform.Rotate(Vector3.up* RotateSpeed * Time.deltaTime);
+        }
         if (triggering)
         {
             npcText.SetActive(true);
