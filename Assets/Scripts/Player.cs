@@ -8,8 +8,8 @@ using System.Diagnostics;
 
 public class Player : MonoBehaviour
 {
-    float _speed = 1;
-    float jumpForce = 7;
+    public float _speed ;
+    public float jumpForce ;
     private Rigidbody rb;
     Animator anim;
     private GameObject triggeringNPC;
