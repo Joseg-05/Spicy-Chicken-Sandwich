@@ -8,17 +8,20 @@ using System.Diagnostics;
 
 public class Player : MonoBehaviour
 {
-    float _speed = 5;
-    float jumpForce = 7;
+    public float _speed ;
+    public float jumpForce ;
     private Rigidbody rb;
     Animator anim;
-
+    private GameObject triggeringNPC;
+    private bool triggering;
+    public GameObject npcText;
+    public float RotateSpeed = 30f;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = new Vector3(0, 0, 0);
+
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
     }
@@ -57,8 +60,48 @@ public class Player : MonoBehaviour
             anim.SetTrigger("Running");
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
+        if (Input.GetKey(KeyCode.R)) 
+        { 
+        transform.Rotate(-Vector3.up * RotateSpeed * Time.deltaTime);
+         }
+        if (Input.GetKey(KeyCode.Q))
+        {
+            transform.Rotate(Vector3.up* RotateSpeed * Time.deltaTime);
+        }
+        if (triggering)
+        {
+            npcText.SetActive(true);
+            if(Input.GetKeyDown(KeyCode.E))
+            {
+                Destroy(triggeringNPC);
+                triggering = false;
+            }
+        }
+        else
+        {
+            npcText.SetActive(false);
+        }
     }
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "NPC")
+        {
 
+            triggering = true;
+            triggeringNPC = other.gameObject;
+
+
+        }
+    }
+    void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "NPC")
+        {
+
+            triggering = false;
+            triggeringNPC = null;
+        }
+    }
 
 
 }
