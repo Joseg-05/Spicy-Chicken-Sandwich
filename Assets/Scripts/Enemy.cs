@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = new Vector3(-5, 0.5f, 7);
+
         render = gameObject.GetComponent<MeshRenderer>();
         render.material.SetColor("_Color", Color.red);
     }

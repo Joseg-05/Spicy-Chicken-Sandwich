@@ -21,9 +21,11 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = new Vector3(0, 0, 0);
+        transform.position = new Vector3(-161.0f, 0.6169f, 106.28f);
+        
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
+
     }
 
     // Update is called once per frame
