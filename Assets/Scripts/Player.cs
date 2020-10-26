@@ -13,16 +13,21 @@ public class Player : MonoBehaviour
     private Rigidbody rb;
     Animator anim;
     private GameObject triggeringNPC;
+    public GameObject heart1;
+    public GameObject heart2;
+    public GameObject heart3;
     private bool triggering;
     public GameObject npcText;
+    public GameObject GameoverText;
+    public int Health ;
     public float RotateSpeed = 30f;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = new Vector3(-161.0f, 0.6169f, 106.28f);
-        
+        transform.position = new Vector3(-161.0f, 0.6169f, 73.28f);
+       
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
 
@@ -83,6 +88,9 @@ public class Player : MonoBehaviour
         {
             npcText.SetActive(false);
         }
+        if (Health > 0) {
+            GameoverText.SetActive(false);
+        }
     }
     void OnTriggerEnter(Collider other)
     {
@@ -104,6 +112,33 @@ public class Player : MonoBehaviour
             triggeringNPC = null;
         }
     }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "enemy")
+        { 
+            Health -= 1;
+            if (Health <= 2 && collision.gameObject.tag == "enemy")
+            {
+                heart3.SetActive(false);
+            }
+            if (Health <= 1 && collision.gameObject.tag == "enemy")
+            {
+                heart2.SetActive(false);
+            }
+            if (Health <= 0 && collision.gameObject.tag == "enemy")
+            {
+                heart1.SetActive(false);
+                GameoverText.SetActive(true);
+                FindObjectOfType<GameManger>().EndGame();
+                
+
+            }
+        }
+        
+        
+    }
+
 
 
 }

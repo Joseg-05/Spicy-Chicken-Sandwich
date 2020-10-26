@@ -18,7 +18,7 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "Rabbit Player")
+        if (other.gameObject.tag == "Player")
         {
 
             render.material.color = Color.green;
