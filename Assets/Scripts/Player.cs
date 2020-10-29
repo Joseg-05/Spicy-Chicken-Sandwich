@@ -9,6 +9,7 @@ using System.Diagnostics;
 public class Player : MonoBehaviour
 {
     public float _speed ;
+    public float _speedTwo = 6;
     public float jumpForce ;
     private Rigidbody rb;
     Animator anim;
@@ -67,14 +68,22 @@ public class Player : MonoBehaviour
             anim.SetTrigger("Running");
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
+
         if (Input.GetKey(KeyCode.R)) 
-        { 
-        transform.Rotate(-Vector3.up * RotateSpeed * Time.deltaTime);
-         }
+        {
+            anim.SetTrigger("Dead");
+            transform.Translate(new Vector3(10, 0, 0) * _speedTwo * Time.deltaTime);
+            anim.SetTrigger("Dead");
+        }
         if (Input.GetKey(KeyCode.Q))
         {
-            transform.Rotate(Vector3.up* RotateSpeed * Time.deltaTime);
+            anim.SetTrigger("Dead");
+            transform.Translate(new Vector3(-10, 0, 0) * _speedTwo * Time.deltaTime);
+            anim.SetTrigger("Dead");
         }
+
+        
+
         if (triggering)
         {
             npcText.SetActive(true);
