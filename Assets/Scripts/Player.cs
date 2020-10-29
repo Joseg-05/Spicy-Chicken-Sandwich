@@ -68,18 +68,18 @@ public class Player : MonoBehaviour
             anim.SetTrigger("Running");
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
-
+        //Dodging Effect Here, These Two
         if (Input.GetKey(KeyCode.R)) 
         {
-            anim.SetTrigger("Dead");
+            
             transform.Translate(new Vector3(10, 0, 0) * _speedTwo * Time.deltaTime);
-            anim.SetTrigger("Dead");
+            
         }
         if (Input.GetKey(KeyCode.Q))
         {
-            anim.SetTrigger("Dead");
+            
             transform.Translate(new Vector3(-10, 0, 0) * _speedTwo * Time.deltaTime);
-            anim.SetTrigger("Dead");
+            
         }
 
         
