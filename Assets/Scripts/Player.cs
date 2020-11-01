@@ -11,23 +11,30 @@ public class Player : MonoBehaviour
     public float _speed ;
     public float _speedTwo = 6;
     public float jumpForce ;
+    public float coins;
+    public float price = 0;
     private Rigidbody rb;
     Animator anim;
     private GameObject triggeringNPC;
     public GameObject heart1;
     public GameObject heart2;
     public GameObject heart3;
-    private bool triggering;
     public GameObject npcText;
+    public GameObject NOT_Enough_CoinsText;
     public GameObject GameoverText;
     public int Health ;
     public float RotateSpeed = 30f;
+
+    private bool triggering;
+    private bool NOT_Enough_Coins;
+    private bool Buy_items;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = new Vector3(-168.344f, 6.439923f, 97.91418f);
+        transform.position = new Vector3(-171.9946f,0, 74.4004f);
+        //transform.position = new Vector3(-168.344f, 6.439923f, 97.91418f);
        
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
@@ -83,7 +90,7 @@ public class Player : MonoBehaviour
         }
 
         
-
+        
         if (triggering)
         {
             npcText.SetActive(true);
@@ -96,10 +103,39 @@ public class Player : MonoBehaviour
         else
         {
             npcText.SetActive(false);
+        }//triggering system for npc
+
+        if (Buy_items)
+        {
+            //Buy_items.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                coins -= price;
+                _speed += 1;//tbd
+                Coins.coinAmount -= price;
+                Destroy(triggeringNPC);
+                triggering = false;
+            }
         }
+        else
+        {
+            //Buy_items.SetActive(false);
+        }
+
+        if (NOT_Enough_Coins)
+        {
+            NOT_Enough_CoinsText.SetActive(true);
+            
+        }
+        else
+        {
+            NOT_Enough_CoinsText.SetActive(false);
+        }
+
+
         if (Health > 0) {
             GameoverText.SetActive(false);
-        }
+        }//healthy heart system
     }
     void OnTriggerEnter(Collider other)
     {
@@ -111,6 +147,51 @@ public class Player : MonoBehaviour
 
 
         }
+        if (other.tag == "Coin")
+        {
+
+            coins += 1;
+            Coins.coinAmount +=1;
+            
+        }
+        if (other.name == "itemA")
+        {
+            if (coins >= 3)
+            {
+
+                price = 3;
+                Buy_items = true;
+                triggeringNPC = other.gameObject;
+
+            }
+            else
+            {
+                NOT_Enough_Coins = true;
+                triggeringNPC = other.gameObject;
+            }
+
+        }
+
+        if (other.name == "itemB")
+        {
+            price = 5;
+            if (coins >= 5)
+            {
+
+                
+                Buy_items = true;
+                triggeringNPC = other.gameObject;
+
+            }
+            else
+            {
+                NOT_Enough_Coins = true;
+                triggeringNPC = other.gameObject;
+            }
+
+
+        }
+
     }
     void OnTriggerExit(Collider other)
     {
@@ -120,7 +201,15 @@ public class Player : MonoBehaviour
             triggering = false;
             triggeringNPC = null;
         }
+        if (other.tag == "items")
+        {
+
+            NOT_Enough_Coins = false;
+            triggeringNPC = null;
+        }
+
     }
+
 
     void OnCollisionEnter(Collision collision)
     {
