@@ -12,6 +12,8 @@ public class Player : MonoBehaviour
     public float _speedTwo = 6;
     public float jumpForce ;
     public float coins;
+    public float changeJump;
+    public float changeSpeed;
     public float price = 0;
     private Rigidbody rb;
     Animator anim;
@@ -111,10 +113,13 @@ public class Player : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 coins -= price;
-                _speed += 1;//tbd
+                _speed += changeSpeed;//tbd
+                jumpForce += changeJump;
                 Coins.coinAmount -= price;
                 Destroy(triggeringNPC);
                 triggering = false;
+                changeSpeed=0;
+                changeJump = 0;
             }
         }
         else
@@ -156,10 +161,12 @@ public class Player : MonoBehaviour
         }
         if (other.name == "itemA")
         {
+            price = 3;
             if (coins >= 3)
             {
 
-                price = 3;
+                
+                changeSpeed = 1;
                 Buy_items = true;
                 triggeringNPC = other.gameObject;
 
@@ -175,10 +182,31 @@ public class Player : MonoBehaviour
         if (other.name == "itemB")
         {
             price = 5;
+            changeSpeed = 2;
             if (coins >= 5)
             {
 
                 
+                Buy_items = true;
+                triggeringNPC = other.gameObject;
+
+            }
+            else
+            {
+                NOT_Enough_Coins = true;
+                triggeringNPC = other.gameObject;
+            }
+
+
+        }
+        if (other.name == "itemC")
+        {
+            price = 5;
+            changeJump = 2;
+            if (coins >= 5)
+            {
+
+
                 Buy_items = true;
                 triggeringNPC = other.gameObject;
 
