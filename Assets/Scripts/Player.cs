@@ -22,6 +22,10 @@ public class Player : MonoBehaviour
     public GameObject heart2;
     public GameObject heart3;
     public GameObject npcText;
+    public GameObject howtoplayText;
+    public GameObject howtoplayText1;
+    public GameObject howtoplayText2;
+    public GameObject howtoplayTextbackground;
     public GameObject NOT_Enough_CoinsText;
     public GameObject GameoverText;
     public int Health ;
@@ -98,13 +102,29 @@ public class Player : MonoBehaviour
             npcText.SetActive(true);
             if(Input.GetKeyDown(KeyCode.E))
             {
-                Destroy(triggeringNPC);
-                triggering = false;
-            }
+                npcText.SetActive(false);
+                howtoplayText.SetActive(true);
+                howtoplayTextbackground.SetActive(true);
+            }  
+            if (Input.GetKeyDown(KeyCode.F))
+                {
+                    howtoplayText.SetActive(false);
+                    howtoplayText1.SetActive(true);
+                }
+             if (Input.GetKeyDown(KeyCode.G))
+                    {
+                        howtoplayText1.SetActive(false);
+                        howtoplayText2.SetActive(true);
+                     }
+
         }
         else
         {
             npcText.SetActive(false);
+            howtoplayText.SetActive(false);
+            howtoplayText1.SetActive(false);
+            howtoplayText2.SetActive(false);
+            howtoplayTextbackground.SetActive(false);
         }//triggering system for npc
 
         if (Buy_items)
@@ -228,6 +248,7 @@ public class Player : MonoBehaviour
 
             triggering = false;
             triggeringNPC = null;
+
         }
         if (other.tag == "items")
         {
