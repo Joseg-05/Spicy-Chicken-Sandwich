@@ -11,7 +11,7 @@ public class Trash : MonoBehaviour
 
     public GameObject Coco;
 
-    public float MobDistanceRun = 7.0f;
+    public float MobDistanceRun = 10.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -25,14 +25,16 @@ public class Trash : MonoBehaviour
     {
         float distance = Vector3.Distance(transform.position, Coco.transform.position);
 
-        if(distance < MobDistanceRun)
+        if (distance < MobDistanceRun)
         {
             Vector3 dirToPlayer = transform.position - Coco.transform.position;
-
+           
             Vector3 newPos = transform.position - dirToPlayer;
+           
 
             Mob.SetDestination(newPos);
 
+            
         }
     }
 }
