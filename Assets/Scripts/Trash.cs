@@ -11,7 +11,7 @@ public class Trash : MonoBehaviour
 
     public GameObject Coco;
 
-    public float MobDistanceRun = 7.0f;
+    public float MobDistanceRun = 63.0f;
 
     // Start is called before the first frame update
     void Start()
