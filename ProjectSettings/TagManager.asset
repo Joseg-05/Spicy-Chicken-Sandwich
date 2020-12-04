@@ -8,6 +8,7 @@ TagManager:
   - enemy
   - Coin
   - items
+  - rage
   layers:
   - Default
   - TransparentFX
