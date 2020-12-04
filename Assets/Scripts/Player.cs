@@ -13,8 +13,10 @@ public class Player : MonoBehaviour
     public float jumpForce ;
     public float coins;
     public float rage;
+    private float timer;
     public int TotalTime;
     public float changeJump;
+    public int count=0;
     public float changeSpeed;
     public float price = 0;
     private Rigidbody rb;
@@ -168,10 +170,13 @@ public class Player : MonoBehaviour
 
         if(rage >= 100)
         {
-            UnityEngine.Debug.Log("Hello11");
+            //UnityEngine.Debug.Log("Hello11");
             Rage_mode = true;
             Ragemodeopentext.SetActive(true);
-            StartCoroutine(CountDown());
+           if(count>= 2)
+           {
+               rage = 0;
+           }
            
     
 
@@ -182,17 +187,7 @@ public class Player : MonoBehaviour
         }
         
     }
-    IEnumerator CountDown()
-    {
-        while (TotalTime >= 0)
-        {
-            UnityEngine.Debug.Log(TotalTime);
-            yield return new WaitForSeconds(1);
-            TotalTime--;
-                     
 
-        }
-    }
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "NPC")
@@ -322,10 +317,12 @@ public class Player : MonoBehaviour
         if (collision.gameObject.tag == "enemy" & Rage_mode == true)
         {
             Destroy(collision.gameObject);
+            count++;
         }
         
         
     }
+
 
 
 
