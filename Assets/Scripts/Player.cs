@@ -12,7 +12,15 @@ public class Player : MonoBehaviour
     public float _speedTwo = 6;
     public float jumpForce ;
     public float coins;
+<<<<<<< HEAD
     public float changeJump;
+=======
+    public float rage;
+    private float timer;
+    public int TotalTime;
+    public float changeJump;
+    public int count=0;
+>>>>>>> master
     public float changeSpeed;
     public float price = 0;
     private Rigidbody rb;
@@ -25,6 +33,10 @@ public class Player : MonoBehaviour
     public GameObject howtoplayText;
     public GameObject howtoplayText1;
     public GameObject howtoplayText2;
+<<<<<<< HEAD
+=======
+    public GameObject Ragemodeopentext;
+>>>>>>> master
     public GameObject howtoplayTextbackground;
     public GameObject NOT_Enough_CoinsText;
     public GameObject GameoverText;
@@ -34,6 +46,10 @@ public class Player : MonoBehaviour
     private bool triggering;
     private bool NOT_Enough_Coins;
     private bool Buy_items;
+<<<<<<< HEAD
+=======
+    private bool Rage_mode;
+>>>>>>> master
 
 
     // Start is called before the first frame update
@@ -161,7 +177,31 @@ public class Player : MonoBehaviour
         if (Health > 0) {
             GameoverText.SetActive(false);
         }//healthy heart system
+<<<<<<< HEAD
     }
+=======
+
+        if(rage >= 100)
+        {
+            //UnityEngine.Debug.Log("Hello11");
+            Rage_mode = true;
+            Ragemodeopentext.SetActive(true);
+           if(count>= 2)
+           {
+               rage = 0;
+           }
+           
+    
+
+        }
+        else
+        {
+            Ragemodeopentext.SetActive(false);
+        }
+        
+    }
+
+>>>>>>> master
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "NPC")
@@ -176,9 +216,22 @@ public class Player : MonoBehaviour
         {
 
             coins += 1;
+<<<<<<< HEAD
             Coins.coinAmount +=1;
             
         }
+=======
+            Coins.coinAmount =coins;
+            
+        }
+
+        if (other.tag == "rage")
+        {
+
+            rage += 100;
+
+        }
+>>>>>>> master
         if (other.name == "itemA")
         {
             price = 3;
@@ -262,7 +315,11 @@ public class Player : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+<<<<<<< HEAD
         if (collision.gameObject.tag == "enemy")
+=======
+        if (collision.gameObject.tag == "enemy"& Rage_mode ==false)
+>>>>>>> master
         { 
             Health -= 1;
             if (Health <= 2 && collision.gameObject.tag == "enemy")
@@ -278,13 +335,25 @@ public class Player : MonoBehaviour
                 heart1.SetActive(false);
                 GameoverText.SetActive(true);
                 FindObjectOfType<GameManger>().EndGame();
+<<<<<<< HEAD
                 
 
             }
         }
+=======
+              
+            }
+        }
+        if (collision.gameObject.tag == "enemy" & Rage_mode == true)
+        {
+            Destroy(collision.gameObject);
+            count++;
+        }
+>>>>>>> master
         
         
     }
+
 
 
 
