@@ -76,8 +76,6 @@
      <Compile Include="Assets\Scripts\GameManger.cs" />
      <Compile Include="Assets\Scripts\NPC.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
-     <Compile Include="Assets\Scripts\Rotate.cs" />
-     <Compile Include="Assets\Scripts\Spawnfalling.cs" />
      <Compile Include="Assets\Scripts\Trash.cs" />
      <Compile Include="Assets\Scripts\camera.cs" />
      <None Include="Assets\Fire &amp; Spell Effects\Prefab\Materials\AdditiveTintable.shader" />
