@@ -8,10 +8,7 @@ TagManager:
   - enemy
   - Coin
   - items
-<<<<<<< HEAD
-=======
   - rage
->>>>>>> master
   layers:
   - Default
   - TransparentFX

@@ -8,19 +8,15 @@ using System.Diagnostics;
 
 public class Player : MonoBehaviour
 {
-    public float _speed ;
+    public float _speed;
     public float _speedTwo = 6;
-    public float jumpForce ;
+    public float jumpForce;
     public float coins;
-<<<<<<< HEAD
-    public float changeJump;
-=======
     public float rage;
     private float timer;
     public int TotalTime;
     public float changeJump;
-    public int count=0;
->>>>>>> master
+    public int count = 0;
     public float changeSpeed;
     public float price = 0;
     private Rigidbody rb;
@@ -33,31 +29,25 @@ public class Player : MonoBehaviour
     public GameObject howtoplayText;
     public GameObject howtoplayText1;
     public GameObject howtoplayText2;
-<<<<<<< HEAD
-=======
     public GameObject Ragemodeopentext;
->>>>>>> master
     public GameObject howtoplayTextbackground;
     public GameObject NOT_Enough_CoinsText;
     public GameObject GameoverText;
-    public int Health ;
+    public int Health;
     public float RotateSpeed = 30f;
 
     private bool triggering;
     private bool NOT_Enough_Coins;
     private bool Buy_items;
-<<<<<<< HEAD
-=======
     private bool Rage_mode;
->>>>>>> master
 
 
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = new Vector3(-171.9946f,0, 74.4004f);
+        transform.position = new Vector3(-171.9946f, 0, 74.4004f);
         //transform.position = new Vector3(-168.344f, 6.439923f, 97.91418f);
-       
+
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
 
@@ -98,40 +88,40 @@ public class Player : MonoBehaviour
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
         //Dodging Effect Here, These Two
-        if (Input.GetKey(KeyCode.R)) 
+        if (Input.GetKey(KeyCode.R))
         {
-            
+
             transform.Translate(new Vector3(10, 0, 0) * _speedTwo * Time.deltaTime);
-            
+
         }
         if (Input.GetKey(KeyCode.Q))
         {
-            
+
             transform.Translate(new Vector3(-10, 0, 0) * _speedTwo * Time.deltaTime);
-            
+
         }
 
-        
-        
+
+
         if (triggering)
         {
             npcText.SetActive(true);
-            if(Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 npcText.SetActive(false);
                 howtoplayText.SetActive(true);
                 howtoplayTextbackground.SetActive(true);
-            }  
+            }
             if (Input.GetKeyDown(KeyCode.F))
-                {
-                    howtoplayText.SetActive(false);
-                    howtoplayText1.SetActive(true);
-                }
-             if (Input.GetKeyDown(KeyCode.G))
-                    {
-                        howtoplayText1.SetActive(false);
-                        howtoplayText2.SetActive(true);
-                     }
+            {
+                howtoplayText.SetActive(false);
+                howtoplayText1.SetActive(true);
+            }
+            if (Input.GetKeyDown(KeyCode.G))
+            {
+                howtoplayText1.SetActive(false);
+                howtoplayText2.SetActive(true);
+            }
 
         }
         else
@@ -154,7 +144,7 @@ public class Player : MonoBehaviour
                 Coins.coinAmount -= price;
                 Destroy(triggeringNPC);
                 triggering = false;
-                changeSpeed=0;
+                changeSpeed = 0;
                 changeJump = 0;
             }
         }
@@ -166,7 +156,7 @@ public class Player : MonoBehaviour
         if (NOT_Enough_Coins)
         {
             NOT_Enough_CoinsText.SetActive(true);
-            
+
         }
         else
         {
@@ -174,34 +164,33 @@ public class Player : MonoBehaviour
         }
 
 
-        if (Health > 0) {
+        if (Health > 0)
+        {
             GameoverText.SetActive(false);
         }//healthy heart system
-<<<<<<< HEAD
-    }
-=======
 
-        if(rage >= 100)
+        if (rage >= 100)
         {
             //UnityEngine.Debug.Log("Hello11");
             Rage_mode = true;
             Ragemodeopentext.SetActive(true);
-           if(count>= 2)
-           {
-               rage = 0;
-           }
-           
-    
+            if (count >= 2)
+            {
+                count = 0;
+                rage = 0;
+                Rage_mode = false;
+            }
+
+
 
         }
         else
         {
             Ragemodeopentext.SetActive(false);
         }
-        
+
     }
 
->>>>>>> master
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "NPC")
@@ -216,13 +205,8 @@ public class Player : MonoBehaviour
         {
 
             coins += 1;
-<<<<<<< HEAD
-            Coins.coinAmount +=1;
-            
-        }
-=======
-            Coins.coinAmount =coins;
-            
+            Coins.coinAmount = coins;
+
         }
 
         if (other.tag == "rage")
@@ -231,14 +215,13 @@ public class Player : MonoBehaviour
             rage += 100;
 
         }
->>>>>>> master
         if (other.name == "itemA")
         {
             price = 3;
             if (coins >= 3)
             {
 
-                
+
                 changeSpeed = 1;
                 Buy_items = true;
                 triggeringNPC = other.gameObject;
@@ -259,7 +242,7 @@ public class Player : MonoBehaviour
             if (coins >= 5)
             {
 
-                
+
                 Buy_items = true;
                 triggeringNPC = other.gameObject;
 
@@ -315,12 +298,8 @@ public class Player : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-<<<<<<< HEAD
-        if (collision.gameObject.tag == "enemy")
-=======
-        if (collision.gameObject.tag == "enemy"& Rage_mode ==false)
->>>>>>> master
-        { 
+        if (collision.gameObject.tag == "enemy" & Rage_mode == false)
+        {
             Health -= 1;
             if (Health <= 2 && collision.gameObject.tag == "enemy")
             {
@@ -335,13 +314,7 @@ public class Player : MonoBehaviour
                 heart1.SetActive(false);
                 GameoverText.SetActive(true);
                 FindObjectOfType<GameManger>().EndGame();
-<<<<<<< HEAD
-                
 
-            }
-        }
-=======
-              
             }
         }
         if (collision.gameObject.tag == "enemy" & Rage_mode == true)
@@ -349,9 +322,8 @@ public class Player : MonoBehaviour
             Destroy(collision.gameObject);
             count++;
         }
->>>>>>> master
-        
-        
+
+
     }
 
 
