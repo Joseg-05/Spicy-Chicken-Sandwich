@@ -36,6 +36,14 @@ public class Player : MonoBehaviour
     public int Health;
     public float RotateSpeed = 30f;
 
+    public AudioSource jumpSFX;
+    public AudioSource takeDMG;
+    public AudioSource coinSFX;
+    public AudioSource gameOverSFX;
+    public AudioSource rageSFX;
+    public AudioSource powerSFX;
+    public AudioSource doDMG;
+
     private bool triggering;
     private bool NOT_Enough_Coins;
     private bool Buy_items;
@@ -85,19 +93,20 @@ public class Player : MonoBehaviour
         if (transform.position.y <= 0.5f && Input.GetKeyDown(KeyCode.Space))
         {
             anim.SetTrigger("Running");
+            jumpSFX.Play();
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
         //Dodging Effect Here, These Two
-        if (Input.GetKey(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R))
         {
 
-            transform.Translate(new Vector3(10, 0, 0) * _speedTwo * Time.deltaTime);
+            transform.Translate(new Vector3(20, 0, 0) * _speedTwo * Time.deltaTime);
 
         }
-        if (Input.GetKey(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
 
-            transform.Translate(new Vector3(-10, 0, 0) * _speedTwo * Time.deltaTime);
+            transform.Translate(new Vector3(-20, 0, 0) * _speedTwo * Time.deltaTime);
 
         }
 
@@ -171,6 +180,7 @@ public class Player : MonoBehaviour
 
         if (rage >= 100)
         {
+            
             //UnityEngine.Debug.Log("Hello11");
             Rage_mode = true;
             Ragemodeopentext.SetActive(true);
@@ -203,7 +213,7 @@ public class Player : MonoBehaviour
         }
         if (other.tag == "Coin")
         {
-
+            coinSFX.Play();
             coins += 1;
             Coins.coinAmount = coins;
 
@@ -211,8 +221,10 @@ public class Player : MonoBehaviour
 
         if (other.tag == "rage")
         {
-
-            rage += 100;
+            powerSFX.Play();
+            rage += 50;
+            if (rage == 100)
+                rageSFX.Play();
 
         }
         if (other.name == "itemA")
@@ -303,15 +315,19 @@ public class Player : MonoBehaviour
             Health -= 1;
             if (Health <= 2 && collision.gameObject.tag == "enemy")
             {
+                takeDMG.Play();
                 heart3.SetActive(false);
             }
             if (Health <= 1 && collision.gameObject.tag == "enemy")
             {
+                takeDMG.Play();
                 heart2.SetActive(false);
             }
             if (Health <= 0 && collision.gameObject.tag == "enemy")
             {
+                //takeDMG.Play();
                 heart1.SetActive(false);
+                gameOverSFX.Play();
                 GameoverText.SetActive(true);
                 FindObjectOfType<GameManger>().EndGame();
 
@@ -319,6 +335,7 @@ public class Player : MonoBehaviour
         }
         if (collision.gameObject.tag == "enemy" & Rage_mode == true)
         {
+            doDMG.Play();
             Destroy(collision.gameObject);
             count++;
         }

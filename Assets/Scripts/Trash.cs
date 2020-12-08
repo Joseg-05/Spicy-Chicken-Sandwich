@@ -35,6 +35,15 @@ public class Trash : MonoBehaviour
             Mob.SetDestination(newPos);
 
         }
+
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Player")
+        {
+            anim.SetTrigger("Attack");
+        }
     }
 
 }
