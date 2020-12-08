@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     public float coins;
     public float rage;
     private float timer;
+    private int npccount=0;
     public int TotalTime;
     public float changeJump;
     public int count = 0;
@@ -117,19 +118,30 @@ public class Player : MonoBehaviour
             npcText.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E))
             {
+                npccount++;
+            }
+            if (npccount==1)
+            {
                 npcText.SetActive(false);
                 howtoplayText.SetActive(true);
                 howtoplayTextbackground.SetActive(true);
             }
-            if (Input.GetKeyDown(KeyCode.F))
+            if (npccount == 2)
             {
                 howtoplayText.SetActive(false);
                 howtoplayText1.SetActive(true);
             }
-            if (Input.GetKeyDown(KeyCode.G))
+            if (npccount == 3)
             {
                 howtoplayText1.SetActive(false);
                 howtoplayText2.SetActive(true);
+                
+            }
+            if(npccount>3 || npccount<1)
+            {
+                howtoplayText2.SetActive(false);
+                howtoplayTextbackground.SetActive(false);
+                npccount = 0;
             }
 
         }

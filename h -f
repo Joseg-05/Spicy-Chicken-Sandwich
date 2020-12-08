@@ -1,0 +1,311 @@
+[33mcommit 07a83a0980e49d67da0b108a56caa51c2b5f0360[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: lurenjiaGZP <zipengguo895388619@gmail.com>
+Date:   Fri Dec 4 12:09:05 2020 -0800
+
+    fallingthings
+
+[33mcommit ffa84c7a3ab54d254000592990a97237eb225cd9[m
+Author: lurenjiaGZP <zipengguo895388619@gmail.com>
+Date:   Fri Dec 4 02:11:12 2020 -0800
+
+    ragesystem
+
+[33mcommit 03b6d209b265330e906b0c08a6c2ab972a464934[m
+Author: Joseg-05 <49496262+Joseg-05@users.noreply.github.com>
+Date:   Thu Dec 3 10:48:29 2020 -0800
+
+    Fixed Range Track System
+
+[33mcommit 15b30c8339f70fba9624856a1225783f489426c1[m
+Author: Joseg-05 <49496262+Joseg-05@users.noreply.github.com>
+Date:   Thu Dec 3 10:46:20 2020 -0800
+
+    Fixed the Range track system
+
+[33mcommit b35342c91879bdf105ef33657fd516d0ef64ffc2[m
+Author: lurenjiaGZP <zipengguo895388619@gmail.com>
+Date:   Fri Nov 13 21:49:50 2020 -0800
+
+    NPC
+
+[33mcommit 57548fdceea910d98af2db59cb279dd188e0447e[m
+Author: Joseg-05 <49496262+Joseg-05@users.noreply.github.com>
+Date:   Thu Nov 12 11:38:31 2020 -0800
+
+    Enemy Decrease player
+
+[33mcommit a5c4d83e2b80a8ec871ec20078a27147001b8fe6[m
+Author: lurenjiaGZP <zipengguo895388619@gmail.com>
+Date:   Thu Nov 12 10:57:43 2020 -0800
+
+    joan upadate
+
+[33mcommit b13312a74c1f0939e15150fa819ce32b874df0d5[m
+Author: Joseg-05 <49496262+Joseg-05@users.noreply.github.com>
+Date:   Mon Nov 9 14:56:56 2020 -0800
+
+    Enemy Follow the Player
+
+[33mcommit ac5f5202709e2b72069ea3b376903d24385754c8[m
+Author: lurenjiaGZP <zipengguo895388619@gmail.com>
+Date:   Mon Nov 2 21:51:36 2020 -0800
+
+    upadate the items
+
+[33mcommit 1ed5d0da6b5629458245695a8ef7851c16cae902[m
+Author: Joseg-05 <49496262+Joseg-05@users.noreply.github.com>
+Date:   Sun Nov 1 16:56:55 2020 -0800
+
+    Destory the enemy
+
+[33mcommit e219116ea62bef22371546658c769fd3e671b479[m
+Author: lurenjiaGZP <zipengguo895388619@gmail.com>
+Date:   Sat Oct 31 21:46:55 2020 -0700
+
+    coin_n_items
+
+[33mcommit c62b95ecb136c12c0437939181e2bc741e2b401e[m
+Author: Joseg-05 <49496262+Joseg-05@users.noreply.github.com>
+Date:   Thu Oct 29 11:07:27 2020 -0700
+
+    Update Player.cs
+
+[33mcommit b0eff78a64900fc01b1147b96f76e0f2e3444d4d[m
+Author: Joseg-05 <49496262+Joseg-05@users.noreply.github.com>
+Date:   Thu Oct 29 11:04:44 2020 -0700
+
+    Dodging Effect on the Bunny
+
+[33mcommit a1bb21f1280301f50ae2acb38cac38868581819e[m
+Author: Joseg-05 <49496262+Joseg-05@users.noreply.github.com>
+Date:   Mon Oct 26 15:31:52 2020 -0700
+
+    Reposition Bunny inside the House (Second Floor, Facing the Door)
+
+[33mcommit b2a7f831bea4a2a220bef4d142154bacf29edefa[m
+Author: Joseg-05 <49496262+Joseg-05@users.noreply.github.com>
+Date:   Mon Oct 26 13:01:07 2020 -0700
+
+    Reposition the bunny inside the house
+
+[33mcommit c342534460c0db1cffa22ae5e973018f75331ff2[m
+Author: lurenjiaGZP <zipengguo895388619@gmail.com>
+Date:   Sun Oct 25 22:32:13 2020 -0700
+
+    live or dead
+
+[33mcommit c1d76c18083357d0205c2b23e6fe4db105fe4a36[m
+Author: Joseg-05 <49496262+Joseg-05@users.noreply.github.com>
+Date:   Thu Oct 22 11:41:46 2020 -0700
+
+    Moved the Bunny inside the House (First Floor)
+
+[33mcommit 22e5faaa9c39aefc2cc1391b9ecafae7b017da64[m
+Author: lurenjiaGZP <zipengguo895388619@gmail.com>
+Date:   Sun Oct 18 18:28:00 2020 -0700
+
+    camera
+
+[33mcommit ba1983322dce7d14cd4fc56b1c24535e0be334ec[m
+Author: Joseg-05 <49496262+Joseg-05@users.noreply.github.com>
+Date:   Thu Oct 15 10:33:16 2020 -0700
+
+    Add Rotation to the Bunny
+
+[33mcommit ebbe7e68e9d2d212a2d912456d5b8436d05bf4e5[m
+Author: Joseg-05 <49496262+Joseg-05@users.noreply.github.com>
+Date:   Thu Oct 15 10:07:50 2020 -0700
+
+    Add Rotation to the Bunny
+
+[33mcommit d175456f707bc7905f2aebd8a8b5917f9f3aeda5[m
+Author: lurenjiaGZP <zipengguo895388619@gmail.com>
+Date:   Fri Oct 9 21:00:54 2020 -0700
+
+    npcnenemy
+
+[33mcommit 87a4462d515609879ae6179400946f2a9daccc61[m
+Merge: c7a29a79 74a3ad02
+Author: lurenjiaGZP <56527042+lurenjiaGZP@users.noreply.github.com>
+Date:   Fri Oct 9 18:59:15 2020 -0700
+
+    Merge pull request #1 from lurenjiaGZP/KH-Update
+    
+    Kh update
+
+[33mcommit 74a3ad02b387e21613f1df6645068788209da458[m
+Author: khoang25 <keithhoang644@gmail.com>
+Date:   Fri Oct 9 18:35:24 2020 -0700
+
+    Polished Unity
+
+[33mcommit dc421591d619fd7e1766ed46e922368cca478543[m
+Merge: e3bdf834 852579d6
+Author: khoang25 <keithhoang644@gmail.com>
+Date:   Fri Oct 9 18:26:37 2020 -0700
+
+    Merge branch 'KH-Update' of https://github.com/lurenjiaGZP/Spicy-Chicken-Sandwich into KH-Update
+
+[33mcommit e3bdf834b9f60e07de97e022de24084e17f38943[m
+Author: khoang25 <keithhoang644@gmail.com>
+Date:   Fri Oct 9 18:17:42 2020 -0700
+
+    Polished some assets
+
+[33mcommit 852579d67dd3313c962cc7e2ec79f5d9267c89a3[m
+Author: khoang25 <63926238+khoang25@users.noreply.github.com>
+Date:   Fri Oct 9 17:56:22 2020 -0700
+
+    Add files via upload
+
+[33mcommit c7a29a79152c921da254864e4f8279cc5bd2e4d9[m
+Author: lurenjiaGZP <zipengguo895388619@gmail.com>
+Date:   Fri Oct 9 11:17:58 2020 -0700
+
+    gzp1009
+
+[33mcommit 07c88f2082e3794c4039b6acfa541eab29e0b816[m
+Author: lurenjiaGZP <zipengguo895388619@gmail.com>
+Date:   Fri Oct 9 09:13:51 2020 -0700
+
+    enviorment
+
+[33mcommit e9991f2b73f067442652983fcb59cb13bf490179[m
+Author: Joseg-05 <49496262+Joseg-05@users.noreply.github.com>
+Date:   Tue Oct 6 10:28:40 2020 -0700
+
+    Update
+
+[33mcommit ab705e56ea8a03923ea1a3e3a1f4dcb0ecb154a9[m
+Author: lurenjiaGZP <zipengguo895388619@gmail.com>
+Date:   Sun Oct 4 18:38:28 2020 -0700
+
+    jump
+
+[33mcommit 377dc82fd1f9d5e506e8ec9a7e2847db76fe98b3[m
+Merge: c6f8b370 3cde86d0
+Author: Joseg-05 <49496262+Joseg-05@users.noreply.github.com>
+Date:   Fri Oct 2 16:37:07 2020 -0700
+
+    Merge branch 'master' of https://github.com/lurenjiaGZP/Spicy-Chicken-Sandwich
+
+[33mcommit c6f8b370bd29afb07a376c4bf1892fc6184cbed6[m
+Author: Joseg-05 <49496262+Joseg-05@users.noreply.github.com>
+Date:   Fri Oct 2 16:36:10 2020 -0700
+
+    Unity Project
+
+[33mcommit 3cde86d0182dd4fade5cbf118bd402139a280e2e[m
+Author: Joseg-05 <49496262+Joseg-05@users.noreply.github.com>
+Date:   Fri Oct 2 16:34:21 2020 -0700
+
+    Update README.md
+
+[33mcommit 8b4650f91da4c9c7ef1311bf532c864094cda822[m
+Author: Joseg-05 <49496262+Joseg-05@users.noreply.github.com>
+Date:   Fri Oct 2 16:04:30 2020 -0700
+
+    Create README.md
+
+[33mcommit 6c039db805ba30606ca4bdf3f8ae78ad2ded1047[m
+Author: Joseg-05 <49496262+Joseg-05@users.noreply.github.com>
+Date:   Fri Oct 2 16:02:16 2020 -0700
+
+    F
+
+[33mcommit 70dad9347043c01cdb6f93bb145f5c4e708b1c98[m
+Author: Joseg-05 <49496262+Joseg-05@users.noreply.github.com>
+Date:   Fri Oct 2 16:01:44 2020 -0700
+
+    F
+
+[33mcommit 9ce60a62118f55f2d902a1f82f892a9c854d73e3[m
+Merge: 13b317aa ea37ddf0
+Author: Joseg-05 <49496262+Joseg-05@users.noreply.github.com>
+Date:   Fri Oct 2 16:01:09 2020 -0700
+
+    Merge branch 'master' of https://github.com/lurenjiaGZP/Spicy-Chicken-Sandwich
+
+[33mcommit 13b317aa6d5d36b996b5735b6293dba1bd7bf197[m
+Author: Joseg-05 <49496262+Joseg-05@users.noreply.github.com>
+Date:   Fri Oct 2 15:57:49 2020 -0700
+
+    F
+
+[33mcommit ea37ddf097ee791138702a838b039e628a2200a2[m
+Author: Joseg-05 <49496262+Joseg-05@users.noreply.github.com>
+Date:   Fri Oct 2 15:54:10 2020 -0700
+
+    Delete Collectable.cs
+
+[33mcommit 2a62f37d9ce72eb8417f4cc91369443f3b9df0a3[m
+Author: Joseg-05 <49496262+Joseg-05@users.noreply.github.com>
+Date:   Fri Oct 2 11:29:28 2020 -0700
+
+    Delete shadercompiler-UnityShaderCompiler.exe3.log
+
+[33mcommit a6c24eb8875ec2317497d5f4c6dc06497a0f5095[m
+Author: Joseg-05 <49496262+Joseg-05@users.noreply.github.com>
+Date:   Fri Oct 2 11:27:22 2020 -0700
+
+    Delete ScriptMapper
+
+[33mcommit 2c146dfcaaecc09624defbc0d8fe315573ba3549[m
+Author: Joseg-05 <49496262+Joseg-05@users.noreply.github.com>
+Date:   Fri Oct 2 11:21:59 2020 -0700
+
+    Add files via upload
+
+[33mcommit f7eca5a2e1603dc80f912d17b170e8b779d6523c[m
+Author: Joseg-05 <49496262+Joseg-05@users.noreply.github.com>
+Date:   Fri Oct 2 11:17:03 2020 -0700
+
+    Add files via upload
+
+[33mcommit 8c7b617b5c5635186210615aa3645089de1e36b5[m
+Author: Joseg-05 <49496262+Joseg-05@users.noreply.github.com>
+Date:   Fri Oct 2 11:15:14 2020 -0700
+
+    Add files via upload
+
+[33mcommit dac8fe6c86799a192992dafdf5f43d07e4ce2fed[m
+Author: Joseg-05 <49496262+Joseg-05@users.noreply.github.com>
+Date:   Fri Oct 2 11:14:43 2020 -0700
+
+    Add files via upload
+
+[33mcommit da99ae3c70e674960c02ff9dae337ea4c5649c73[m
+Author: Joseg-05 <49496262+Joseg-05@users.noreply.github.com>
+Date:   Fri Oct 2 11:11:50 2020 -0700
+
+    Add files via upload
+
+[33mcommit a6caca0d05163b4619af8565e94fdbea7e7fcbe9[m
+Author: Joseg-05 <49496262+Joseg-05@users.noreply.github.com>
+Date:   Fri Oct 2 11:11:15 2020 -0700
+
+    Add files via upload
+
+[33mcommit 93470abfd77bbeb1037b09876f11ccfe58a28140[m
+Author: Joseg-05 <49496262+Joseg-05@users.noreply.github.com>
+Date:   Fri Oct 2 11:10:48 2020 -0700
+
+    Add files via upload
+
+[33mcommit 09cbe2a40bca28a3acce8ce5e069e935ef9ae705[m
+Author: Joseg-05 <49496262+Joseg-05@users.noreply.github.com>
+Date:   Fri Oct 2 11:10:06 2020 -0700
+
+    Add files via upload
+
+[33mcommit bc2697888e81eb5f68609fa0b20eaaa878ebed7e[m
+Author: lurenjiaGZP <zipengguo895388619@gmail.com>
+Date:   Fri Oct 2 09:42:35 2020 -0700
+
+    first commit
+
+[33mcommit 81a7b0c7feb40cdec24a9ba4304001d58d913d56[m
+Author: lurenjiaGZP <56527042+lurenjiaGZP@users.noreply.github.com>
+Date:   Thu Aug 27 18:58:14 2020 -0700
+
+    Initial commit
